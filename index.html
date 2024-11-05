@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ChatBot</title>
+    <link rel="stylesheet" href="style.css" />
+    <style></style>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+      integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <!-- used marked to convert response  from markdown to html   -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/marked/14.1.3/marked.min.js"></script>
+  </head>
+  <body>
+    <h1 class="titre">Welcome To ChatBot</h1>
+
+    <div class="container-chatbot">
+      <div class="header-chatbot">
+        <div class="logo">
+          <i class="fa-solid fa-robot"></i>
+          ChatBot
+        </div>
+
+        <button onclick="closeChatBot()" class="btn-header-close-chat">
+          <i class="fa-solid fa-chevron-down"></i>
+        </button>
+      </div>
+      <div class="body-chatbot">
+        <div class="container-messages"></div>
+        <div class="form-message">
+          <form name="form-send-message" method="post">
+            <textarea
+              name="message"
+              required
+              placeholder="message..."
+            ></textarea>
+            <div class="container-btn-form-message">
+              <button type="submit" class="btn-send-message">
+                <i class="fa-solid fa-paper-plane"></i>
+              </button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <button onclick="openChatBot()" class="btn-open-chatBot">
+      <i class="fa-regular fa-message"></i>
+    </button>
+
+    <script src="script.js"></script>
+  </body>
+</html>
